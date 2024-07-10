@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(85deg, #070564, #159069);
+  padding: 10px;
+  /* color: white; Example: Adding white text for visibility */
+}
+
+.to-do_app {
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 20px; /* so that the borders will be round*/
+}
+
+/*this is for text in h2 tag of the class to-do_app */
+.to-do_app h2 {
+  color: #002765;
+  display: flex; /* because we have to align the icon and the text*/
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* now this is for the img tag in h2 of class to-do_app*/
+.to-do_app h2 img {
+  width: 30px;
+  margin-left: 10px; /* because of this there will be space between the icon and the text*/
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1; /*now it will take the full width */
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  outline: none;
+  background: orangered;
+  padding: 16px 50px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* to add a circle in front of the task (list)*/
+ul li::before {
+  content: ""; /* content will be empty in this*/
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%; /*for giving a round shape to it */
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #000;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0%;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  columns: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: red;
+}
